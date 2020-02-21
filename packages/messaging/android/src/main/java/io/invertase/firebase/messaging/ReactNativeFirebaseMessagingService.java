@@ -41,6 +41,16 @@ public class ReactNativeFirebaseMessagingService extends FirebaseMessagingServic
     Log.d(TAG, "onMessageReceived");
     ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
 
+
+    Intent i = new Intent("womensafety.intent.action.Launch");
+
+//    i.setClassName("com.quable.womensafety", "MainActivity");
+
+//    Intent i = new Intent(getBaseContext(), MainActivity.class);
+    i.putExtra("PersonID", 1);
+    startActivity(i);
+
+
     // ----------------------
     //  NOTIFICATION Message
     // --------------------\/
